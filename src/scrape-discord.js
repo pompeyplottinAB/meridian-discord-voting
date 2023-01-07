@@ -6,6 +6,9 @@ const path = require("path");
 const { existsSync } = require("fs");
 
 const token = process.env.DISCORD_TOKEN;
+const CHANNEL_MATTDESL = process.env.CHANNEL;
+const START_ID = process.env.START_ID;
+const ARTBOT_USER_ID = process.env.ARTBOT_USER_ID;
 const dataFile = path.resolve(__dirname, "../output/discord_messages.json");
 
 async function getMessages({
@@ -60,10 +63,6 @@ async function updateDatabase(dataToAppend) {
 }
 
 (async () => {
-  const CHANNEL_MATTDESL = "833713318107545670";
-  const START_ID = "1019964919069810749";
-  const ARTBOT_USER_ID = "794646394420854824";
-
   let previousId = null;
   let iterations = 0;
   let maxIterations = Infinity;

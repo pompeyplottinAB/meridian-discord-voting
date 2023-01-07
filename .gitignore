@@ -5,3 +5,5 @@ node_modules
 .env
 src/640
 src/best
+.*.swp
+.*.swo
